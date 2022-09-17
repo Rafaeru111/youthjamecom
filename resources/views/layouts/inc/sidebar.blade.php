@@ -88,7 +88,19 @@
 <li class="nav-item">
     <a class="nav-link" href="tables.html">
         <i class="fas fa-fw fa-table"></i>
-        <span>Tables</span></a>
+        <span>Print Requests</span></a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="tables.html">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Accounts</span></a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="tables.html">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Messages</span></a>
 </li>
 
 <!-- Nav Item - Charts -->
