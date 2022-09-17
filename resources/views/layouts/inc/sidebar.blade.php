@@ -2,7 +2,7 @@
      <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('dashboard') }}">
     <div class="sidebar-brand-text mx-3">Youth Jam admin<sup>tm</sup></div>
 </a>
 
@@ -11,7 +11,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{ url('dashboard') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
@@ -86,7 +86,7 @@
 
 <!-- Nav Item - Tables -->
 <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="{{ url('category') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Print Requests</span></a>
 </li>
