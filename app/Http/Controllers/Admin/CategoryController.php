@@ -9,7 +9,11 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return view('admin.Category.index');
+
+       // model category will fetch the data and store in $cat
+        $cat = Category::all();
+
+        return view('admin.Category.index', compact('cat'));
     }
 
     public function add()
@@ -26,7 +30,7 @@ class CategoryController extends Controller
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext;
-            $file->move('assets/uploads/category'.$filename);
+            $file->move('assets/uploads/category' ,$filename);
             $cat->image = $filename;
         }
           $cat->name = $request->input('name');
