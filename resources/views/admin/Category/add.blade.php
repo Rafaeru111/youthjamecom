@@ -22,16 +22,18 @@
                                                 <label for=""> Description</label>
                                                 <textarea class="form-control" rows = '3' name="desc"></textarea>
                                              </div>
+
                                              <div class="row">
                                                 <div class='col-md-2 mb-3'>
-                                                    <label for=""> <strong>Description</strong></label>
+                                                    <label for=""> <strong>Status</strong></label>
                                                     <input type="checkbox" class="form-control" name="status">
                                                 </div>
                                                  <div class='col-md-2 mb-3'>
                                                     <label for=""> Popular</label>
                                                     <input type="checkbox" class="form-control" name="pop">
                                                  </div>
-                                                 </div>
+                                             </div>
+                                             
                                              <div class='col-md-6 mb-3'>
                                                 <label for=""> Meta Tile</label>
                                                 <input type="text" class="form-control" name="metat">

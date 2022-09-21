@@ -10,7 +10,7 @@
 <hr class="sidebar-divider my-0">
 
 <!-- Nav Item - Dashboard -->
-<li class="nav-item active">
+<li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
     <a class="nav-link" href="{{ url('dashboard') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
@@ -85,19 +85,19 @@
 -->
 
 <!-- Nav Item - Tables -->
-<li class="nav-item">
+<li class="nav-item {{ Request::is('category') ? 'active' : '' }}">
     <a class="nav-link" href="{{ url('category') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Print Requests</span></a>
 </li>
 
-<li class="nav-item">
-    <a class="nav-link" href="tables.html">
+<li class="nav-item {{ Request::is('product') ? 'active' : '' }}">
+    <a class="nav-link"href="{{ url('product') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Accounts</span></a>
+        <span>Products</span></a>
 </li>
 
-<li class="nav-item">
+<li class="nav-item ">
     <a class="nav-link" href="tables.html">
         <i class="fas fa-fw fa-table"></i>
         <span>Messages</span></a>

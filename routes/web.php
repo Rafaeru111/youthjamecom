@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
+
 
 
 /*
@@ -25,7 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//if admin is logged in route
+//if user is logged in route
     Route::middleware(['auth', 'isAdmin'])->group(function (){
         Route::get('/dashboard','Admin\FrontendController@index');
         Route::get('/category','Admin\CategoryController@index');
@@ -41,5 +43,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         //delete
         Route::get('deletecat/{id}', [CategoryController::class, 'destroy']);
 
+
+        //for products
+        Route::get('/product','Admin\ProductController@index');
+        Route::get('addprod','Admin\ProductController@add');
+        Route::post('insert-prod','Admin\ProductController@insert');
+            Route::get('editprod/{id}', [ProductController::class, 'edit']);
+            //update
+            Route::put('update-prody/{id}', [ProductController::class, 'update']);
+            //delete
+            Route::get('deleteprod/{id}', [ProductController::class, 'destroy']);
      
     }); 
