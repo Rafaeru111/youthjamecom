@@ -1,0 +1,60 @@
+/***** Global Style *****/
+*{
+    font-family: Play;
+  }
+  p{
+    font-size: 20px;
+    color: #444;
+  }
+  
+  /***** Global Slide *****/
+  .slide-right, .slide-left {
+    width: 100%;
+  }
+  
+  /***** Slide Right *****/
+  .slide-right {
+    animation: 3s slide-right;
+  }
+  @keyframes slide-right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+
+  /***** Slide Left *****/
+  .slide-left {
+    animation: 3s slide-left;
+  }
+  @keyframes slide-left {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+
+
+  /***** FadeIn Underline *****/
+  .line {
+    border-bottom: 3px solid red;
+    width: 200px;
+    margin: auto;
+  }
+
+  .fade-in {
+    animation: fadeIn ease 5s;
+  }
+  @keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  

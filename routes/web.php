@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Frontend\FrontendController;
 
 
 
@@ -17,13 +18,12 @@ use App\Http\Controllers\Admin\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+//Route::get('/', function () {
+ //   return view('welcome');
+//});
+Route::get('/', [FrontendController::class, 'index']); 
 // authenticate routes
-Auth::routes(); 
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -48,9 +48,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('/product','Admin\ProductController@index');
         Route::get('addprod','Admin\ProductController@add');
         Route::post('insert-prod','Admin\ProductController@insert');
+
+
             Route::get('editprod/{id}', [ProductController::class, 'edit']);
             //update
-            Route::put('update-prody/{id}', [ProductController::class, 'update']);
+            Route::put('update-prod/{id}', [ProductController::class, 'update']);
             //delete
             Route::get('deleteprod/{id}', [ProductController::class, 'destroy']);
      

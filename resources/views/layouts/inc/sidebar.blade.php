@@ -88,7 +88,7 @@
 <li class="nav-item {{ Request::is('category') ? 'active' : '' }}">
     <a class="nav-link" href="{{ url('category') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Print Requests</span></a>
+        <span>Category</span></a>
 </li>
 
 <li class="nav-item {{ Request::is('product') ? 'active' : '' }}">
@@ -100,14 +100,14 @@
 <li class="nav-item ">
     <a class="nav-link" href="tables.html">
         <i class="fas fa-fw fa-table"></i>
-        <span>Messages</span></a>
+        <span>Print Requests</span></a>
 </li>
 
 <!-- Nav Item - Charts -->
 <li class="nav-item">
     <a class="nav-link" href="charts.html">
-        <i class="fas fa-fw fa-chart-area"></i>
-        <span>Charts</span></a>
+        <i class="fas fa-fw fa-user"></i>
+        <span>Users</span></a>
 </li>
 
 

@@ -18,9 +18,10 @@
                                         <tr>
                                             <th scope="col">ID</th>
                                             <th scope="col">Name</th>
-                                            <th scope="col">Slug</th>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">Short Description</th>
                                             <th scope="col">Status</th>
-                                            <th scope="col">Popular</th>
+                                            <th scope="col">Trend</th>
                                             <th scope="col">Image</th>
                                             <th scope="col">Action</th>
 
@@ -29,20 +30,22 @@
                                     <tbody>
                                         @foreach($prod as $p)
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>{{$p->id}}</td>
+                                            <td>{{$p->name}}</td>
+                                                   <!-- getting the name in category table-->
+                                            <td>{{$p->cat->name}}</td>
                                                 <!-- Single line if else statement  1 = YES and 0 = NO-->
-                                            <td></td>
-                                            <td></td>
+                                            <td>{{$p->psdec}}</td>
+                                            <td>{{$p->status == 1 ? 'Yes' : 'No' }}</td>
+                                            <td>{{$p->trend == 1 ? 'Yes' : 'No'}}</td>
                                                 <td>
-                                                    {{-- <img height="60px" src="{{asset('assets/uploads/product/'.$c->image)}}" alt="">  --}}
+                                                    <img height="60px" src="{{asset('assets/uploads/product/'.$p->image)}}" alt="">  
                                         
                                                 </td>
                                             <td> 
-                                              {{--       <a href="{{ url('editcat/'.$c->id)}}" class="btn btn-primary"> Edit </a>
+                                                    <a href="{{ url('editprod/'.$p->id)}}" class="btn btn-primary"> Edit </a>
                                                     
-                                                    <a href="{{ url('deletecat/'.$c->id)}}" class="btn btn-danger"> Delete </a> --}}
+                                                    <a href="{{ url('deleteprod/'.$p->id)}}" class="btn btn-danger"> Delete </a> 
                                             </td>
                                     
                                         </tr>
