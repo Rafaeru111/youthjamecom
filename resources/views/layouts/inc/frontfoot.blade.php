@@ -1,5 +1,5 @@
-<footer class="container py-5 bg-light">
-    <div class="row">
+<footer class="container-fluid py-5 bg-light">
+    <div class="row container">
       <div class="col-12 col-md text-center">
         <small class="d-block mb-3 text-muted">YouthJam &copy; 2022</small>
       </div>

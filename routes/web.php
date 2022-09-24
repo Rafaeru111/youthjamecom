@@ -21,11 +21,16 @@ use App\Http\Controllers\Frontend\FrontendController;
 //Route::get('/', function () {
  //   return view('welcome');
 //});
+
 Route::get('/', [FrontendController::class, 'index']); 
 // authenticate routes
 
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/frontproduct', [FrontendController::class, 'product']);
+ 
+
 
 //if user is logged in route
     Route::middleware(['auth', 'isAdmin'])->group(function (){
@@ -43,17 +48,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         //delete
         Route::get('deletecat/{id}', [CategoryController::class, 'destroy']);
 
-
         //for products
         Route::get('/product','Admin\ProductController@index');
         Route::get('addprod','Admin\ProductController@add');
         Route::post('insert-prod','Admin\ProductController@insert');
-
 
             Route::get('editprod/{id}', [ProductController::class, 'edit']);
             //update
             Route::put('update-prod/{id}', [ProductController::class, 'update']);
             //delete
             Route::get('deleteprod/{id}', [ProductController::class, 'destroy']);
-     
+
     }); 

@@ -38,14 +38,7 @@
     }
   }
 
-
-  /***** FadeIn Underline *****/
-  .line {
-    border-bottom: 3px solid red;
-    width: 200px;
-    margin: auto;
-  }
-
+  
   .fade-in {
     animation: fadeIn ease 5s;
   }
@@ -57,4 +50,5 @@
       opacity:1;
     }
   }
-  
+
+
